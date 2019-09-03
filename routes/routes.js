@@ -1,11 +1,15 @@
 const userController = require("../controller/user.controller");
+const swaggerUi = require("swagger-ui-express");
+const swaggerDocument = require("./swagger");
 const api = "/api";
 
 module.exports = function (app) {
 
-    app.get(api + "/users", userController.allUser);
+    app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-    app.post(api + "/users", userController.createUser);
+    app.route(api + "/users")
+        .get(userController.allUser)
+        .post(userController.createUser);
 
     app.get(api + "/users/{id}");
 
