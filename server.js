@@ -31,8 +31,10 @@ db.sequelize.sync({force: false}).then(() => {
     initial();
 });
 
-let server = app.listen(8000, function () {
+/*let server = app.listen(8000, function () {
     const host = server.address().address;
     const port = server.address().port;
-    console.log("app is listening at http://%s:%s", host, port);
-});
+    // console.log("app is listening at http://%s:%s", host, port);
+});*/
+const port = process.env.PORT || 8000;
+app.listen(port);

@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "prod": "node dist/api.bundle.js"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +18,11 @@
     "express": "^4.17.1",
     "mysql2": "^1.7.0",
     "pg": "^7.12.1",
+    "pg-hstore": "^2.3.3",
     "sequelize": "^5.17.1"
+  },
+  "devDependencies": {
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7"
   }
 }

@@ -8,5 +8,5 @@ module.exports = (sequelize, Sequelize) => {
         libelle: {
             type: Sequelize.STRING
         }
-    })
+    });
 };

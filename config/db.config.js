@@ -1,6 +1,6 @@
 // change this require to env-dev in local : const env = require('./env-dev');
 // change this require to env-prod in production : const env = require('./env-prod');
-const env = require("./env-dev");
+const env = require("./env-prod");
 const Sequelize = require("sequelize");
 const sequelize = new Sequelize(env.database, env.username, env.password, {
     host: env.host,
