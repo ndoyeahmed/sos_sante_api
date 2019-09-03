@@ -1,9 +1,9 @@
 const env = {
-    database: '',
-    username: '',
-    password: '',
-    host: '',
-    dialect: '',
+    database: "qgnofwuk",
+    username: "qgnofwuk",
+    password: "3EMqbbusMhwBu_LaWfK0gAuil7upX3t7",
+    host: "salt.db.elephantsql.com",
+    dialect: "postgres",
     pool:{
         max: 5,
         min: 0,

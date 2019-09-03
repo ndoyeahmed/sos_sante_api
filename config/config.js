@@ -1,3 +1,3 @@
 module.exports = {
-    ROLES: ['ADMIN', 'MEMBRE', 'DONNEUR']
+    ROLES: ["ADMIN", "MEMBRE", "DONNEUR"]
 };

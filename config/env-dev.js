@@ -1,9 +1,9 @@
 const env = {
-    database: '',
-    username: '',
-    password: '',
-    host: 'localhost',
-    dialect: 'postgres',
+    database: "",
+    username: "",
+    password: "",
+    host: "localhost",
+    dialect: "postgres",
     pool:{
         max: 5,
         min: 0,
