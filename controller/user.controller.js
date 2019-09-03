@@ -13,7 +13,7 @@ exports.createUser = (req, res) => {
         username: req.body.username,
         password: bcrypt.hashSync(req.body.password, 8)
     }).then(user => {
-        Roles.findAll({ where: { name: { [Op.or]: req.body.roles } } })
+        Roles.findAll({where: {name: {[Op.or]: req.body.roles}}})
             .then((roles) => {
                 user.setRoles(roles).then(() => {
                     res.send("User registered successfully!");
@@ -36,8 +36,35 @@ exports.allUser = (req, res) => {
 
 exports.allRoles = (req, res) => {
     Roles.findAll().then((roles) => {
-        res.status(200).send(roles);
+        if (roles && roles.length > 0) {
+            res.status(200).send(roles);
+        } else {
+            initial();
+            Roles.findAll().then((r) => {
+                res.status(200).send(r);
+            }).catch((error) => {
+                res.status(500).send("Error -> " + error);
+            });
+        }
+
     }).catch((err) => {
         res.status(500).send("Error -> " + err);
     });
 };
+
+function initial() {
+    Roles.create({
+        id: 1,
+        name: "ADMIN"
+    });
+
+    Roles.create({
+        id: 2,
+        name: "MEMBRE"
+    });
+
+    Roles.create({
+        id: 3,
+        name: "DONNEUR"
+    });
+}
