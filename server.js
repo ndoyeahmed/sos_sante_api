@@ -7,9 +7,6 @@ require("./routes/routes")(app);
 
 const db = require("./config/db.config");
 const Roles = db.roles;
-db.sequelize.sync({force: false}).then(() => {
-    initial();
-});
 
 function initial() {
     if (!Roles.findAll()) {
@@ -29,6 +26,10 @@ function initial() {
         });
     }
 }
+
+db.sequelize.sync({force: false}).then(() => {
+    initial();
+});
 
 let server = app.listen(8000, function () {
     const host = server.address().address;
