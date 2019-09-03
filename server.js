@@ -9,7 +9,7 @@ const db = require("./config/db.config");
 const Roles = db.roles;
 
 function initial() {
-    if (!Roles.findAll()) {
+    if (!Roles.findAll() || Roles.findAll().length <= 0) {
         Roles.create({
             id: 1,
             name: "ADMIN"
