@@ -133,12 +133,14 @@
   "definitions": {
     "User": {
       "required": [
-        "email",
-        "_id"
+        "cin",
+        "id",
+        "username",
+        "password"
       ],
       "properties": {
-        "_id": {
-          "type": "string",
+        "id": {
+          "type": "integer",
           "uniqueItems": true
         },
         "cin": {

@@ -30,3 +30,13 @@ A
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 <
 package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+A
+webpack.config.js,d\5\d5595158cc48f9bf3e51b06f6e6805a8fd2d6262
+B
+dist/api.bundle.js,d\e\de02aa18a92a7b8976cb253c486430e2c98563e0
+A
+package-lock.json,f\a\fa288d1472d29beccb489a676f68739ad365fc47
+C
+routes/swagger.json,6\b\6b1aee785fb82cb0bf6feb51fc074a58c798b855
