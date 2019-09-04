@@ -12,7 +12,7 @@ exports.createUser = (req, res) => {
         phoneNumber: req.body.phoneNumber,
         username: req.body.username,
         password: bcrypt.hashSync(req.body.password, 8)
-    }).then(user => {
+    }).then((user) => {
         Roles.findAll({where: {name: {[Op.or]: req.body.roles}}})
             .then((roles) => {
                 user.setRoles(roles).then(() => {
