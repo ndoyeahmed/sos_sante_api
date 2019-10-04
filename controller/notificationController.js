@@ -14,7 +14,9 @@ exports.notif = (req, res) => {
     fcm.send(message, function (err, response) {
         if (err) {
             console.log("Something went wrong " + err);
+            res.status(500).send("Error -> " + err);
         } else {
+            res.status(200).send("Error -> " + response);
             console.log("successfully sent with response " + response);
         }
     })
