@@ -16,7 +16,7 @@ exports.notif = (req, res) => {
             console.log("Something went wrong " + err);
             res.status(500).send("Error -> " + err);
         } else {
-            res.status(200).send("Error -> " + response);
+            res.status(200).send("success -> " + response);
             console.log("successfully sent with response " + response);
         }
     })
